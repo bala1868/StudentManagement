@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Records</title>
+    <link rel="stylesheet" href="/css/base-style.css">
+    <link rel="stylesheet" href="/css/navbar.css">
+    <link rel="stylesheet" href="/css/table.css">
+    <link rel="stylesheet" href="/css/buttons.css">
+    <link rel="stylesheet" href="/css/toast-notification.css">
+    <link rel="stylesheet" href="/css/record-section.css">
+    <link rel="stylesheet" href="/css/departmentsection.css">
+    <link rel="stylesheet" href="/css/top-performer.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="/css/footer.css">
+</head>
+<body>
+ <!-- Navigation Bar Structure - Use this for all pages -->
+<nav class="navbar">
+    <div class="nav-container">
+        <!-- Left: Logo and Name -->
+        <div class="nav-logo">
+            <a href="home.html"><img src="/Images/collegelogo.jfif" alt="Logo"></a>
+            <span><a href="home.html">Student Portal</a></span>
+        </div>
+        
+        <!-- Mobile Toggle Button (Hamburger) -->
+        <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        
+        <!-- Right: Menu and Theme Toggle (becomes sidebar on mobile) -->
+        <div class="nav-right" id="navRight">
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="home.html" class="nav-link ">Home</a></li>
+                <li><a href="records.html" class="nav-link active">Records</a></li>
+                <li><a href="add-student.html" class="nav-link">Add Student</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
+            </ul>
+            
+            <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+                <span class="sun-icon">☀️</span>
+                <span class="moon-icon">🌙</span>
+            </button>
+        </div>
+    </div>
+</nav>
+
+    <main class="main-content">
+        <div class="container">
+            <h1 class="page-title">Student Records</h1>
+
+            <section class="department-section" id="departmentSection">
+                <h2>Select Department</h2>
+                <div class="department-grid">
+                    <article class="department-card" onclick="showDepartmentRecords('CSE')" title="Computer Science">
+                        <div class="dept-icon"><i class="fa-solid fa-computer"></i></div>
+                        <h3>Computer Science</h3>
+                        <p>CSE</p>
+                    </article>
+                    <article class="department-card" onclick="showDepartmentRecords('ECE')" title="Electronics">
+                        <div class="dept-icon"><i class="fa-solid fa-microchip"></i></div>
+                        <h3>Electronics</h3>
+                        <p>ECE</p>
+                    </article>
+                    <article class="department-card" onclick="showDepartmentRecords('MECH')" title="Mechanical">
+                        <div class="dept-icon"><i class="fa-solid fa-gears"></i></div>
+                        <h3>Mechanical</h3>
+                        <p>MECH</p>
+                    </article>
+                    <article class="department-card" onclick="showDepartmentRecords('CIVIL')" title="Civil">
+                        <div class="dept-icon"><i class="fa-solid fa-building"></i></div>
+                        <h3>Civil</h3>
+                        <p>CIVIL</p>
+                    </article>
+                    <article class="department-card" onclick="showDepartmentRecords('EEE')" title="Electrical">
+                        <div class="dept-icon"><i class="fa-solid fa-bolt"></i></div>
+                        <h3>Electrical</h3>
+                        <p>EEE</p>
+                    </article>
+                    <article class="department-card" onclick="showDepartmentRecords('IT')" title="Information Tech">
+                        <div class="dept-icon"><i class="fa-solid fa-laptop-code"></i></div>
+                        <h3>IT</h3>
+                        <p>IT</p>
+                    </article>
+                </div>
+            </section>
+
+            <section class="records-section" id="recordsSection" style="display: none;">
+                <button class="btn-back-sticky" onclick="backToDepartments()" title="Back">
+                    ← Back
+                </button>
+                
+                <div class="records-header">
+                    <h2 id="departmentTitle">Department Records</h2>
+                </div>
+
+<div class="search-filter-bar">
+    <div class="search-input-wrapper">
+        <input type="text" 
+               id="searchInput" 
+               class="search-input" 
+               placeholder="Search by name, ID, class"
+               title="Search students"
+               onkeypress="if(event.key === 'Enter') filterStudents()">
+        <button class="search-icon-btn" onclick="filterStudents()" title="Click to search">
+                      <i class="fa-solid fa-magnifying-glass"></i>
+        </button>
+    </div>
+    <select id="filterGrade" class="filter-select" onchange="filterStudents()" title="Filter by grade">
+        <option value="">All Grades</option>
+        <option value="A+">A+</option>
+        <option value="A">A</option>
+        <option value="B+">B+</option>
+        <option value="B">B</option>
+        <option value="C">C</option>
+    </select>
+</div>
+                <aside class="top-performers">
+                    <h3>🏆 Top 5</h3>
+                    <ol id="topPerformersList" class="top-performers-list"></ol>
+                </aside>
+
+                <div class="table-container">
+                    <table class="student-table">
+                        <thead>
+                            <tr>
+                                <th title="Photo">Photo</th>
+                                <th class="sortable" data-column="id" title="Sort by ID">ID</th>
+                                <th class="sortable" data-column="name" title="Sort by Name">Name</th>
+                                <th class="sortable" data-column="class" title="Sort by Class">Class</th>
+                                <th title="Section">Section</th>
+                                <th title="Department">Dept</th>
+                                <th title="Contact">Contact</th>
+                                <th class="sortable" data-column="percentage" title="Sort by %">Percentage</th>
+                                <th title="Grade">Grade</th>
+                                <th title="Actions">Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody id="studentTableBody"></tbody>
+                    </table>
+                </div>
+
+                <div id="noRecordsMessage" class="no-records" style="display: none;">
+                    <p>No students found.</p>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Aura Institute of Technology</h3>
+                    <p>123 University Avenue<br>Tech City, Tamil Nadu - 638502<br>India</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact Us</h3>
+                    <p><strong>Phone:</strong> +91 93 1234 5678<br><strong>Email:</strong> info@auracollege.edu<br><strong>Admissions:</strong> admissions@auracollege.edu</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="home.html">Home</a></li>
+                        <li><a href="records.html">Student Records</a></li>
+                        <li><a href="add-student.html">Add Student</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Follow Us</h3>
+                    <div class="social-icons">
+                        <a href="#" aria-label="Facebook"><img src="/Images/facebook.svg" alt="Facebook"></a>
+                        <a href="#" aria-label="Twitter"><img src="/Images/twitter-x.svg" alt="Twitter"></a>
+                        <a href="#" aria-label="LinkedIn"><img src="/Images/linkedin.svg" alt="LinkedIn"></a>
+                        <a href="#" aria-label="Instagram"><img src="/Images/instagram.svg" alt="Instagram"></a>
+                        <a href="#" aria-label="YouTube"><img src="/Images/youtube.svg" alt="YouTube"></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Aura Institute of Technology. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="/js/storage.js"></script>
+    <script src="/js/nav.js"></script>
+    <script src="/js/records.js"></script><script src="/js/toast.js"></script>
+</body>
+</html>

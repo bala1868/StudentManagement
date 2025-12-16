@@ -1,0 +1,10 @@
+.introduction-section {
+    padding: 2rem 0;
+    background: var(--bg-secondary);
+}
+
+.intro-text {
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+    line-height: 1.8;
+}

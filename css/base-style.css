@@ -1,0 +1,520 @@
+/* ==================== ROOT VARIABLES - 70/30 COLOR RATIO ==================== */
+:root {
+    /* Neutral Colors (70%) - Main background and content */
+    --bg-color: #ffffff;
+    --bg-secondary: #f1f5f9;
+    --surface-color: #f8fafc;
+    --surface-secondary: #f1f5f9;
+    --text-primary: #0f172a;
+    --text-secondary: #475569;
+    --text-light: #64748b;
+    --border-color: #e2e8f0;
+    
+    /* Brand Colors (30%) - Accents and highlights */
+    --primary-color: #6366f1;
+    --primary-dark: #4f46e5;
+    --secondary-color: #6366f1;
+    --success-color: #10b981;
+    --danger-color: #ef4444;
+    
+    /* Shadows */
+    --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+    --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+    --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+    
+    /* Transitions */
+    --transition-fast: 150ms cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-base: 300ms cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-slow: 500ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+[data-theme="dark"] {
+    --bg-color: #0f172a;
+    --bg-secondary: #1e293b;
+    --surface-color: #1e293b;
+    --surface-secondary: #334155;
+    --text-primary: #f1f5f9;
+    --text-secondary: #cbd5e1;
+    --text-light: #94a3b8;
+    --border-color: #334155;
+    --primary-color: #818cf8;
+    --primary-dark: #6366f1;
+    --secondary-color: #a78bfa;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+/* Icon Color Standards */
+.icon-primary {
+    color: var(--primary-color) !important;
+}
+
+.icon-secondary {
+    color: var(--secondary-color) !important;
+}
+
+.icon-success {
+    color: var(--success-color) !important;
+}
+
+.icon-danger {
+    color: var(--danger-color) !important;
+}
+
+.icon-warning {
+    color: #f59e0b !important;
+}
+
+/* Icon Sizes */
+.icon-sm {
+    font-size: 1rem;
+}
+
+.icon-md {
+    font-size: 1.5rem;
+}
+
+.icon-lg {
+    font-size: 2rem;
+}
+
+.icon-xl {
+    font-size: 3rem;
+}
+
+/* Form Label Icons */
+.form-label i {
+    color: var(--primary-color);
+    margin-right: 0.5rem;
+    width: 18px;
+    display: inline-block;
+    text-align: center;
+}
+
+/* Button Icons */
+.btn i {
+    margin-right: 0.5rem;
+}
+
+.btn-primary i {
+    color: white;
+}
+
+.btn-secondary i {
+    color: var(--text-primary);
+}
+
+/* Feature Card Icons */
+.feature-icon i {
+    font-size: 3rem;
+    transition: all var(--transition-base);
+}
+
+.feature-card:hover .feature-icon i {
+    transform: scale(1.2);
+}
+
+/* Department Card Icons */
+.dept-icon i {
+    font-size: 3rem;
+    transition: all var(--transition-base);
+}
+
+.department-card:hover .dept-icon i {
+    transform: scale(1.2) rotate(5deg);
+}
+
+/* Section Title Icons */
+.form-section-title i,
+h2 i,
+h3 i {
+    margin-right: 0.75rem;
+}
+
+/* Search Icon Button */
+.search-icon-btn i {
+    color: white;
+    font-size: 1rem;
+}
+
+/* Top Performers Icon */
+.top-performers h3 i {
+    margin-right: 0.5rem;
+    animation: trophy-shine 2s ease-in-out infinite;
+}
+
+@keyframes trophy-shine {
+    0%, 100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+    50% {
+        opacity: 0.8;
+        transform: scale(1.1);
+    }
+}
+
+/* Table Action Icons */
+.btn-action i {
+    margin-right: 0.25rem;
+    font-size: 0.875rem;
+}
+
+/* Contact Info Icons */
+.contact-icon-compact i {
+    font-size: 1.5rem;
+}
+
+/* Department Contact Icons */
+.dept-contact-card h3 i {
+    margin-right: 0.5rem;
+    color: var(--primary-color);
+}
+
+.dept-contact-card p i {
+    color: var(--primary-color);
+    margin-right: 0.5rem;
+    width: 18px;
+    display: inline-block;
+    text-align: center;
+}
+
+/* File Upload Icon */
+.file-upload-label i {
+    margin-right: 0.5rem;
+    font-size: 1.125rem;
+}
+
+.drop-icon i {
+    display: block;
+    margin-bottom: 1rem;
+}
+
+/* CTA Section Icons */
+.cta-buttons .btn i {
+    font-size: 1.125rem;
+}
+
+/* Countdown Section Icon */
+.countdown-section h2 i {
+    margin-right: 1rem;
+    color: white;
+    opacity: 0.9;
+}
+
+/* Back Button Icon */
+.btn-back-sticky i {
+    margin-right: 0.5rem;
+}
+
+/* No Records Icon */
+.no-records i {
+    font-size: 2rem;
+    color: var(--text-secondary);
+    margin-right: 0.5rem;
+}
+
+/* Toast Icons - Override default emoji */
+.toast-icon {
+    font-size: 24px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+}
+
+.toast.success .toast-icon::before {
+    content: '\f058';
+    font-family: 'Font Awesome 6 Free';
+    font-weight: 900;
+}
+
+.toast.error .toast-icon::before {
+    content: '\f057';
+    font-family: 'Font Awesome 6 Free';
+    font-weight: 900;
+}
+
+.toast.info .toast-icon::before {
+    content: '\f05a';
+    font-family: 'Font Awesome 6 Free';
+    font-weight: 900;
+}
+
+.toast.warning .toast-icon::before {
+    content: '\f071';
+    font-family: 'Font Awesome 6 Free';
+    font-weight: 900;
+}
+
+/* Icon hover effects */
+i {
+    transition: all var(--transition-base);
+}
+
+/* Responsive Icon Sizes */
+@media (max-width: 768px) {
+    .feature-icon i,
+    .dept-icon i {
+        font-size: 2.5rem;
+    }
+    
+    .contact-icon-compact i {
+        font-size: 1.25rem;
+    }
+    
+    .icon-xl {
+        font-size: 2.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .feature-icon i,
+    .dept-icon i {
+        font-size: 2rem;
+    }
+    
+    .form-label i {
+        font-size: 0.875rem;
+    }
+}
+
+/* Dark Mode Icon Adjustments */
+[data-theme="dark"] .form-label i,
+[data-theme="dark"] .dept-contact-card p i {
+    opacity: 0.9;
+}
+
+/* Icon Animation on Hover */
+.feature-card:hover .feature-icon i,
+.department-card:hover .dept-icon i,
+.contact-info-card-compact:hover .contact-icon-compact i {
+    filter: drop-shadow(0 4px 8px rgba(99, 102, 241, 0.3));
+}
+
+/* Specific Icon Color Assignments for Consistency */
+.fa-computer,
+.fa-laptop-code,
+.fa-chart-line,
+.fa-graduation-cap {
+    color: var(--secondary-color);
+}
+
+.fa-microchip,
+.fa-magnifying-glass,
+.fa-image {
+    color: var(--secondary-color);
+}
+
+.fa-gears,
+.fa-pen-to-square,
+.fa-shield-halved,
+.fa-phone {
+    color: var(--secondary-color);
+}
+
+.fa-building,
+.fa-mobile-screen-button,
+.fa-clock {
+    color: var(--secondary-color);
+}
+
+.fa-bolt {
+    color: var(--secondary-color);
+}
+
+.fa-trophy {
+    color: #6366f1;
+}
+
+.fa-envelope,
+.fa-location-dot {
+    color: var(--secondary-color);
+}
+
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-primary);
+    line-height: 1.5;
+    transition: background-color var(--transition-base), color var(--transition-base);
+    overflow-x: hidden;
+}
+
+/* ==================== ANIMATIONS ==================== */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(15px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideInFromLeft {
+    from { opacity: 0; transform: translateX(-20px); }
+    to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes scaleIn {
+    from { opacity: 0; transform: scale(0.95); }
+    to { opacity: 1; transform: scale(1); }
+}
+
+/* ==================== CONTAINER ==================== */
+.container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 0.75rem;
+    animation: fadeIn 0.4s ease-out;
+}
+
+/* ==================== TYPOGRAPHY ==================== */
+.page-title {
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 0.25rem;
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.page-subtitle {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    margin-bottom: 0.75rem;
+}
+
+/* ==================== UTILITY CLASSES ==================== */
+.text-center { text-align: center; }
+.mt-1 { margin-top: 0.5rem; }
+.mt-2 { margin-top: 1rem; }
+.mb-1 { margin-bottom: 0.5rem; }
+.mb-2 { margin-bottom: 1rem; }
+.p-1 { padding: 0.5rem; }
+.p-2 { padding: 1rem; }
+
+/* ==================== CARDS ==================== */
+.card {
+    background: var(--surface-color);
+    border-radius: 10px;
+    padding: 1rem;
+    box-shadow: var(--shadow-md);
+    transition: all var(--transition-base);
+    border: 1px solid var(--border-color);
+}
+
+.card:hover {
+    box-shadow: var(--shadow-lg);
+    transform: translateY(-2px);
+}
+
+/* ==================== RESPONSIVE ==================== */
+@media (max-width: 768px) {
+    .page-title { font-size: 1.5rem; }
+    .page-subtitle { font-size: 0.8125rem; }
+    .container { padding: 0 0.5rem; }
+}
+
+/* ==================== SCROLLBAR ==================== */
+::-webkit-scrollbar { width: 8px; height: 8px; }
+::-webkit-scrollbar-track { background: var(--bg-color); }
+::-webkit-scrollbar-thumb { background: var(--primary-color); border-radius: 4px; }
+::-webkit-scrollbar-thumb:hover { background: var(--primary-dark); }
+
+/* ==================== PAGINATION ==================== */
+.pagination-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 1rem 0;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+}
+
+.pagination-info {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+}
+
+.pagination-controls {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+}
+
+.pagination-select {
+    padding: 0.5rem 0.75rem;
+    border: 2px solid var(--border-color);
+    border-radius: 6px;
+    background: var(--surface-color);
+    color: var(--text-primary);
+    font-size: 0.875rem;
+    cursor: pointer;
+    transition: all var(--transition-base);
+}
+
+.pagination-select:focus {
+    outline: none;
+    border-color: var(--primary-color);
+}
+
+.pagination-buttons {
+    display: flex;
+    gap: 0.375rem;
+}
+
+.pagination-btn {
+    padding: 0.5rem 0.875rem;
+    background: var(--surface-color);
+    border: 2px solid var(--border-color);
+    border-radius: 6px;
+    color: var(--text-primary);
+    font-size: 0.875rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all var(--transition-base);
+}
+
+.pagination-btn:hover:not(:disabled) {
+    background: var(--primary-color);
+    color: white;
+    border-color: var(--primary-color);
+}
+
+.pagination-btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.pagination-btn.active {
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    color: white;
+    border-color: var(--primary-color);
+}
+
+@media (max-width: 768px) {
+    .pagination-container {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    
+    .pagination-controls {
+        flex-direction: column;
+        width: 100%;
+    }
+    
+    .pagination-buttons {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+}
