@@ -36,42 +36,96 @@ Add screenshots to `Images/` and reference them here using Markdown image links.
 - Use browser DevTools to inspect and debug UI or scripts.
 
 ---
-📦 Docker Image Pull & Run
+Got it 👍
+You want the **README instructions written clearly for other users** (not you), so anyone can **pull and run your Docker image easily**.
 
-This project is available as a Docker image on Docker Hub.
+Here is a **user-friendly, public README section** 👇
+You can **copy–paste this directly**.
 
-🔹 Pull the Docker Image
+---
+
+## 🚀 Run This Project Using Docker
+
+You can run this application easily without setting up the source code by using the pre-built Docker image.
+
+---
+
+### 🔹 Step 1: Install Docker
+
+Make sure Docker is installed on your system.
+
+👉 Download Docker: [https://www.docker.com/get-started](https://www.docker.com/get-started)
+
+---
+
+### 🔹 Step 2: Pull the Docker Image
+
+```bash
 docker pull balapersonal/student-portal:latest
+```
 
-🔹 Run the Container
+---
+
+### 🔹 Step 3: Run the Application
+
+```bash
 docker run -d -p 8080:80 --name student-portal balapersonal/student-portal:latest
+```
 
-🔹 Access the Application
+---
 
-Open your browser and go to:
+### 🔹 Step 4: Access the Application
 
+Open your browser and visit:
+
+```
 http://localhost:8080
+```
 
-🛠 Requirements
+---
 
-Docker installed on your system
+## 🛑 Stop & Remove Container
 
-Internet connection (for pulling the image)
-
-📌 Notes
-
-Port 8080 on your machine is mapped to port 80 inside the container
-
-You can stop the container using:
-
+```bash
 docker stop student-portal
-
-
-Remove container:
-
 docker rm student-portal
+```
 
-⭐ Docker Hub Repository
+---
 
-🔗 [https://hub.docker.com/r/balapersonal/student-portal]((https://hub.docker.com/r/balapersonal/student-portal))
+## 📌 Useful Commands
+
+Check running containers:
+
+```bash
+docker ps
+```
+
+Check all containers:
+
+```bash
+docker ps -a
+```
+
+---
+
+## 📦 Docker Hub Image
+
+The Docker image is hosted on Docker Hub:
+🔗 [https://hub.docker.com/r/balapersonal/student-portal](https://hub.docker.com/r/balapersonal/student-portal)
+
+---
+
+## 🧑‍💻 Who Is This For?
+
+* Students
+* Recruiters
+* Developers
+* Anyone who wants to test the project quickly
+
+No environment setup required — just Docker 👍
+
+---
+
+
 
