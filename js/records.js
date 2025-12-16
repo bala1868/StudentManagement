@@ -228,8 +228,11 @@ function initializeSortableTable() {
     const headers = document.querySelectorAll('.student-table th.sortable');
     
     headers.forEach(header => {
-        header.addEventListener('click', () => {
-            const column = header.dataset.column;
+        // Remove duplicate listeners by replacing header with a clean clone
+        const cleanHeader = header.cloneNode(true);
+        header.parentNode.replaceChild(cleanHeader, header);
+        cleanHeader.addEventListener('click', () => {
+            const column = cleanHeader.dataset.column;
             sortTable(column);
         });
     });
