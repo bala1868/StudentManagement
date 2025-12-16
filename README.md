@@ -36,4 +36,42 @@ Add screenshots to `Images/` and reference them here using Markdown image links.
 - Use browser DevTools to inspect and debug UI or scripts.
 
 ---
+📦 Docker Image Pull & Run
+
+This project is available as a Docker image on Docker Hub.
+
+🔹 Pull the Docker Image
+docker pull balapersonal/student-portal:latest
+
+🔹 Run the Container
+docker run -d -p 8080:80 --name student-portal balapersonal/student-portal:latest
+
+🔹 Access the Application
+
+Open your browser and go to:
+
+http://localhost:8080
+
+🛠 Requirements
+
+Docker installed on your system
+
+Internet connection (for pulling the image)
+
+📌 Notes
+
+Port 8080 on your machine is mapped to port 80 inside the container
+
+You can stop the container using:
+
+docker stop student-portal
+
+
+Remove container:
+
+docker rm student-portal
+
+⭐ Docker Hub Repository
+
+🔗 [https://hub.docker.com/r/balapersonal/student-portal]((https://hub.docker.com/r/balapersonal/student-portal))
 
