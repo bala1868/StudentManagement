@@ -27,20 +27,7 @@ Add screenshots to `Images/` and reference them here using Markdown image links.
 
 ---
 
-## Quick start ⚡
 
-Serve the project directory with any static file server (examples below):
-
-- Using Python 3:
-
-```powershell
-python -m http.server 8000
-# then open: http://localhost:8000/index.html
-```
-
-- Using VS Code Live Server extension: right-click `index.html` → "Open with Live Server"
-
----
 
 ## Development 🔧
 
