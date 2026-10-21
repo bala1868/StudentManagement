@@ -4,37 +4,36 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Add Student - Student Records</title>
-    <link rel="stylesheet" href="css/base-style.css">
-    <link rel="stylesheet" href="css/navbar.css">
-    <link rel="stylesheet" href="css/form.css">
-    <link rel="stylesheet" href="css/buttons.css">
-    <link rel="stylesheet" href="css/image-upload.css">
-    <link rel="stylesheet" href="css/footer.css">
-    <link rel="stylesheet" href="css/recent.css">
-    <link rel="stylesheet" href="css/toast-notification.css">
-    <!-- Professional Icon Library -->
+    <link rel="stylesheet" href="../css/base-style.css">
+    <link rel="stylesheet" href="../css/navbar.css">
+    <link rel="stylesheet" href="../css/form.css">
+    <link rel="stylesheet" href="../css/buttons.css">
+    <link rel="stylesheet" href="../css/image-upload.css">
+    <link rel="stylesheet" href="../css/footer.css">
+    <link rel="stylesheet" href="../css/recent.css">
+    <link rel="stylesheet" href="../css/toast-notification.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 <body>
     <nav class="navbar">
         <div class="nav-container">
             <div class="nav-logo">
-                <a href="home.html"><img src="/Images/collegelogo.jfif" alt="Logo"></a>
-                <span><a href="home.html">Student Portal</a></span>
+                <a href="./home.html"><img src="../Images/collegelogo.jfif" alt="Logo"></a>
+                <span><a href="./home.html">Student Portal</a></span>
             </div>
-            
+
             <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
                 <span></span>
                 <span></span>
                 <span></span>
             </button>
-            
+
             <div class="nav-right" id="navRight">
                 <ul class="nav-menu" id="navMenu">
-                    <li><a href="home.html" class="nav-link">Home</a></li>
-                    <li><a href="records.html" class="nav-link">Records</a></li>
-                    <li><a href="add-student.html" class="nav-link active">Add Student</a></li>
-                    <li><a href="contact.html" class="nav-link">Contact</a></li>
+                    <li><a href="./home.html" class="nav-link">Home</a></li>
+                    <li><a href="./records.html" class="nav-link">Records</a></li>
+                    <li><a href="./add-student.html" class="nav-link active">Add Student</a></li>
+                    <li><a href="./contact.html" class="nav-link">Contact</a></li>
                 </ul>
                 <button class="theme-toggle" id="themeToggle" title="Toggle theme">
                     <span class="sun-icon">☀️</span>
@@ -56,13 +55,12 @@
             <section class="form-section">
                 <div class="form-container">
                     <div id="formMessage" class="form-message" style="display: none;"></div>
-                    
+
                     <div class="student-form-wrapper form-compact">
-                        <!-- Personal Information -->
                         <h3 class="form-section-title">
                             <i class="fa-solid fa-user" style="color: var(--primary-color);"></i> Personal Information
                         </h3>
-                        
+
                         <div class="form-row">
                             <div class="form-group">
                                 <label for="studentId" class="form-label">
@@ -96,8 +94,7 @@
                         </div>
 
                         <div class="form-section-divider"></div>
-                        
-                        <!-- Academic Information -->
+
                         <h3 class="form-section-title">
                             <i class="fa-solid fa-graduation-cap" style="color: #6366f1;"></i> Academic Information
                         </h3>
@@ -172,7 +169,6 @@
 
                         <div class="form-section-divider"></div>
 
-                        <!-- Photo & Address -->
                         <h3 class="form-section-title">
                             <i class="fa-solid fa-image" style="color: var(--secondary-color);"></i> Additional Details
                         </h3>
@@ -245,20 +241,20 @@
                 <div class="footer-section">
                     <h3>Quick Links</h3>
                     <ul class="footer-links">
-                        <li><a href="home.html">Home</a></li>
-                        <li><a href="records.html">Student Records</a></li>
-                        <li><a href="add-student.html">Add Student</a></li>
-                        <li><a href="contact.html">Contact Us</a></li>
+                        <li><a href="./home.html">Home</a></li>
+                        <li><a href="./records.html">Student Records</a></li>
+                        <li><a href="./add-student.html">Add Student</a></li>
+                        <li><a href="./contact.html">Contact Us</a></li>
                     </ul>
                 </div>
                 <div class="footer-section">
                     <h3>Follow Us</h3>
                     <div class="social-icons">
-                        <a href="#" aria-label="Facebook"><img src="/Images/facebook.svg" alt="Facebook"></a>
-                        <a href="#" aria-label="Twitter"><img src="/Images/twitter-x.svg" alt="Twitter"></a>
-                        <a href="#" aria-label="LinkedIn"><img src="/Images/linkedin.svg" alt="LinkedIn"></a>
-                        <a href="#" aria-label="Instagram"><img src="/Images/instagram.svg" alt="Instagram"></a>
-                        <a href="#" aria-label="YouTube"><img src="/Images/youtube.svg" alt="YouTube"></a>
+                        <a href="#" aria-label="Facebook"><img src="../Images/facebook.svg" alt="Facebook"></a>
+                        <a href="#" aria-label="Twitter"><img src="../Images/twitter-x.svg" alt="Twitter"></a>
+                        <a href="#" aria-label="LinkedIn"><img src="../Images/linkedin.svg" alt="LinkedIn"></a>
+                        <a href="#" aria-label="Instagram"><img src="../Images/instagram.svg" alt="Instagram"></a>
+                        <a href="#" aria-label="YouTube"><img src="../Images/youtube.svg" alt="YouTube"></a>
                     </div>
                 </div>
             </div>
@@ -268,13 +264,10 @@
         </div>
     </footer>
 
-    <script src="/js/storage.js"></script>
-    <script src="/js/nav.js"></script>
-    <script src="/js/records.js"></script>
-    <script src="/js/image-upload.js"></script>
-    <script src="/js/toast.js"></script>
-    <script>
-      
-    </script>
+    <script src="../js/storage.js"></script>
+    <script src="../js/nav.js"></script>
+    <script src="../js/records.js"></script>
+    <script src="../js/image-upload.js"></script>
+    <script src="../js/toast.js"></script>
 </body>
 </html>

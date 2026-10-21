@@ -4,42 +4,37 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Us - Student Records</title>
-    <link rel="stylesheet" href="/css/base-style.css">
-    <link rel="stylesheet" href="/css/navbar.css">
-    <link rel="stylesheet" href="/css/buttons.css">
-    <link rel="stylesheet" href="/css/form.css">
-    <link rel="stylesheet" href="/css/contact.css">
-    <link rel="stylesheet" href="/css/footer.css">
-    <link rel="stylesheet" href="/css/toast-notification.css">
-    <!-- Professional Icon Library -->
+    <link rel="stylesheet" href="../css/base-style.css">
+    <link rel="stylesheet" href="../css/navbar.css">
+    <link rel="stylesheet" href="../css/buttons.css">
+    <link rel="stylesheet" href="../css/form.css">
+    <link rel="stylesheet" href="../css/contact.css">
+    <link rel="stylesheet" href="../css/footer.css">
+    <link rel="stylesheet" href="../css/toast-notification.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 <body>
-    <!-- Navigation Bar -->
-<nav class="navbar">
+    <nav class="navbar">
     <div class="nav-container">
-        <!-- Left: Logo and Name -->
         <div class="nav-logo">
-            <a href="home.html"><img src="/Images/collegelogo.jfif" alt="Logo"></a>
-            <span><a href="home.html">Student Portal</a></span>
+            <a href="./home.html"><img src="../Images/collegelogo.jfif" alt="Logo"></a>
+            <span><a href="./home.html">Student Portal</a></span>
         </div>
-        
-        <!-- Mobile Toggle Button (Hamburger) -->
+
         <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
             <span></span>
             <span></span>
             <span></span>
         </button>
-        
-        <!-- Right: Menu and Theme Toggle (becomes sidebar on mobile) -->
+
         <div class="nav-right" id="navRight">
             <ul class="nav-menu" id="navMenu">
-                <li><a href="home.html" class="nav-link">Home</a></li>
-                <li><a href="records.html" class="nav-link">Records</a></li>
-                <li><a href="add-student.html" class="nav-link">Add Student</a></li>
-                <li><a href="contact.html" class="nav-link active">Contact</a></li>
+                <li><a href="./home.html" class="nav-link">Home</a></li>
+                <li><a href="./records.html" class="nav-link">Records</a></li>
+                <li><a href="./add-student.html" class="nav-link">Add Student</a></li>
+                <li><a href="./contact.html" class="nav-link active">Contact</a></li>
             </ul>
-            
+
             <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
                 <span class="sun-icon">☀️</span>
                 <span class="moon-icon">🌙</span>
@@ -48,18 +43,16 @@
     </div>
 </nav>
 
-    <!-- Main Content -->
     <main class="main-content">
         <div class="container">
             <h1 class="page-title">Contact Administration</h1>
             <p class="page-subtitle">Get in touch with us for any queries or assistance</p>
 
             <div class="contact-wrapper-new">
-                <!-- Contact Form -->
                 <section class="contact-form-section-new">
                     <h2>Send us a Message</h2>
                     <div id="contactFormMessage" class="form-message" style="display: none;"></div>
-                    
+
                     <div class="contact-form-wrapper">
                         <div class="form-row">
                             <div class="form-group">
@@ -119,7 +112,6 @@
                     </div>
                 </section>
 
-                <!-- Contact Information Cards -->
                 <aside class="contact-info-section-new">
                     <article class="contact-info-card-compact" onclick="scrollToMap()" style="cursor: pointer;" title="Click to view map">
                         <div class="contact-icon-compact">
@@ -169,7 +161,6 @@
                         </div>
                     </article>
 
-                    <!-- Map -->
                     <article class="contact-map-card" id="mapCard">
                        <iframe 
   width="100%" 
@@ -180,12 +171,10 @@
   referrerpolicy="no-referrer-when-downgrade"
   src="https://www.google.com/maps?q=11.55386,77.55178&output=embed">
 </iframe>
-
                     </article>
                 </aside>
             </div>
 
-            <!-- Department Contacts -->
             <section class="department-contacts-section">
                 <h2>Department Contacts</h2>
                 <div class="department-contacts-grid">
@@ -243,20 +232,20 @@
                 <div class="footer-section">
                     <h3>Quick Links</h3>
                     <ul class="footer-links">
-                        <li><a href="home.html">Home</a></li>
-                        <li><a href="records.html">Student Records</a></li>
-                        <li><a href="add-student.html">Add Student</a></li>
-                        <li><a href="contact.html">Contact Us</a></li>
+                        <li><a href="./home.html">Home</a></li>
+                        <li><a href="./records.html">Student Records</a></li>
+                        <li><a href="./add-student.html">Add Student</a></li>
+                        <li><a href="./contact.html">Contact Us</a></li>
                     </ul>
                 </div>
                 <div class="footer-section">
                     <h3>Follow Us</h3>
                     <div class="social-icons">
-                        <a href="#" aria-label="Facebook"><img src="/Images/facebook.svg" alt="Facebook"></a>
-                        <a href="#" aria-label="Twitter"><img src="/Images/twitter-x.svg" alt="Twitter"></a>
-                        <a href="#" aria-label="LinkedIn"><img src="/Images/linkedin.svg" alt="LinkedIn"></a>
-                        <a href="#" aria-label="Instagram"><img src="/Images/instagram.svg" alt="Instagram"></a>
-                        <a href="#" aria-label="YouTube"><img src="/Images/youtube.svg" alt="YouTube"></a>
+                        <a href="#" aria-label="Facebook"><img src="../Images/facebook.svg" alt="Facebook"></a>
+                        <a href="#" aria-label="Twitter"><img src="../Images/twitter-x.svg" alt="Twitter"></a>
+                        <a href="#" aria-label="LinkedIn"><img src="../Images/linkedin.svg" alt="LinkedIn"></a>
+                        <a href="#" aria-label="Instagram"><img src="../Images/instagram.svg" alt="Instagram"></a>
+                        <a href="#" aria-label="YouTube"><img src="../Images/youtube.svg" alt="YouTube"></a>
                     </div>
                 </div>
             </div>
@@ -265,12 +254,10 @@
             </div>
         </div>
     </footer>
-    <script src="/js/storage.js"></script>
-    <script src="/js/nav.js"></script>
-    <script src="/js/records.js"></script>
-    <script src="/js/contact.js"></script>
-    <script src="/js/toast.js"></script>
-    
-   
+    <script src="../js/storage.js"></script>
+    <script src="../js/nav.js"></script>
+    <script src="../js/records.js"></script>
+    <script src="../js/contact.js"></script>
+    <script src="../js/toast.js"></script>
 </body>
 </html>
